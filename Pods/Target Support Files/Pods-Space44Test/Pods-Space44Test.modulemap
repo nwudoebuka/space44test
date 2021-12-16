@@ -1,0 +1,6 @@
+framework module Pods_Space44Test {
+  umbrella header "Pods-Space44Test-umbrella.h"
+
+  export *
+  module * { export * }
+}
