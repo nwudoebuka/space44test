@@ -24,8 +24,21 @@ class Space44TestUITests: XCTestCase {
 
     func testExample() throws {
         // UI tests must launch the application that they test.
+        
         let app = XCUIApplication()
         app.launch()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 0).children(matching: .other).element.children(matching: .collectionView).element(boundBy: 1).children(matching: .cell).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.tap()
+        app.children(matching: .window).element(boundBy: 4).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
+        
+        let cell = app.collectionViews.children(matching: .cell).element(boundBy: 0)
+        cell.swipeLeft()
+        cell.swipeLeft()
+        
+        let space44testImagedetailviewNavigationBar = app.navigationBars["Space44Test.ImageDetailView"]
+        space44testImagedetailviewNavigationBar.buttons["Back"].tap()
+        space44testImagedetailviewNavigationBar.buttons["Unsplash"].tap()
+ 
+       
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
